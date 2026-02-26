@@ -1,0 +1,1 @@
+[{"Id":1,"Name":"Docker","Category":"Containerization","IsIntalled":true},{"Id":2,"Name":"Kubernetes","Category":"Orchestration","IsIntalled":false},{"Id":4,"Name":"Ansible","Category":"Configuration Management","IsIntalled":false}]
