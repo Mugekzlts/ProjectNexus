@@ -6,7 +6,15 @@ var builder = WebApplication.CreateBuilder(args);
 // .NET'e ToolService'i tanıtıyoruz. Uygulama boyunca tek bir depo (Singleton) olacak.
 builder.Services.AddSingleton<ToolService>();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+// --- SWAGGER ARAYÜZÜNÜ AKTİF ET ---
+// Konteynerda sorun yaşamamak için şimdilik "if" kontrolü olmadan her zaman açalım
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // --- ROTALAR (ENDPOINTS) ---
 
